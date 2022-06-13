@@ -1,0 +1,17 @@
+extends authCardBase 
+
+block authHeaderIcon
+    i.fas.fa-unlock-alt.fa-3x.m-1
+
+block authContent 
+    h1.auth__card-form--h1.cmb-2 Reset your password
+    p.small This is the last step, just submit the form with proper data to reset your password.
+    form.form__passReset(data-rtkn=`${resetToken}`)
+        .form-group.mt-2.mb-2 
+            label(for='pass') Password 
+                small.text-muted.ml-1 (Min. 8 characters)
+            input.form-control.auth__card-input(type='password' placeholder='...........' id="pass" required)     
+        .form-group.mb-4 
+            label(for='cpass') Confirm Password 
+            input.form-control.auth__card-input(type='password' placeholder='...........' id="cpass" required)   
+        input.btn.btn-block.cbg-primary.auth__card-btn.form__passReset-btn(type='submit' value='Submit')

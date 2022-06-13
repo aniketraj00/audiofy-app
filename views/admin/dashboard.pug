@@ -1,0 +1,31 @@
+extends adminBase
+
+mixin dashboardItemCardView(title, desc, link)
+    .col-sm-12.col-md-6.col-lg-4.col-xl-3.mb-3
+        a(href=`${link}` style='text-decoration: none; color: #fff')
+            .card.text-dark.mb-3.h-100
+                .card-body
+                    h5.card-title #{title}
+                    p.card-text #{desc}
+
+block content 
+
+    .container-fluid.pl-lg-5.pt-lg-5.pr-lg-5
+        .row.p-2 
+            .col-12.col-md-6.col-lg-4
+                h1.display-5.content__main--h1.mt-3 Dashboard
+                p.mb-0 Everything stacked together at one place. Access all the features directly from this page.
+        hr
+        .row.p-2
+            
+            +dashboardItemCardView('Manage Albums', 'Opens up a new page that lets you manage all the audio albums and its metadata currently present in the AWS Bucket', '/admin/manageAlbum')
+            +dashboardItemCardView('Upload Album', 'Opens up a new page that lets you upload a complete audio album and its data directly to the AWS Bucket', '/admin/uploadAlbum')
+            +dashboardItemCardView('Manage Users', 'Opens up a new Page that lets you manage users registered on the website. Also lets you deactivate any user account.', '/admin/manageUser')
+
+            .col-sm-12.col-md-6.col-lg-4.col-xl-3.mb-3
+                a(href='#' style='text-decoration: none; color: #fff' class='logoutBtn')
+                    .card.text-dark.mb-3.h-100
+                        .card-body
+                            h5.card-title Logout
+                            p.card-text This one is simple folks. Just throws you out of the system 
+                                span.fas.fa-smile-wink(style='color: black;')

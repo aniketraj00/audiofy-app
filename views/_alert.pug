@@ -1,0 +1,12 @@
+.modal.fade(id='alert' tabindex='-1' role='dialog' data-backdrop='static' data-keyboard='false')
+    .modal-dialog.modal-dialog-centered(role='document')
+        .modal-content(style='background: transparent; border: none')
+            .modal-body
+                .card#alert-body
+                    .card-body
+                        .d-flex.justify-content-between
+                            div
+                                p.mb-0#alert-text.text-light Some error message...
+                            div.ml-2
+                                p.text-right.mb-0.text-light(style='font-size: 1.2rem' data-dismiss='modal')
+                                    span.far.fa-times-circle.fx-3x

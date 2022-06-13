@@ -1,0 +1,16 @@
+extends authCardBase 
+
+block authHeaderIcon
+    i.fas.fa-unlock-alt.fa-3x.m-1
+
+block authContent 
+    h1.auth__card-form--h1.cmb-2 Reset your password
+    p.small First you need to authenticate yourself, so submit the form to send the verification email.
+    form.form__passReset-verify
+        .form-group.mb-4.mt-2
+            label(for='emailId') Email address 
+            input.form-control(type='email' placeholder='abc@example.com' id='emailId' required)
+        input.btn.btn-block.cbg-primary.auth__card-btn.form__passReset-verify--btn(type='submit' value='Send Verification Email')
+    hr
+    p.mb-0 Remember your password ?
+        a.ml-2.auth__card-btn--link(href='/login') Log in

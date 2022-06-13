@@ -1,0 +1,32 @@
+doctype html
+html
+    head
+        block head
+            meta(charset='UTF-8')
+            meta(name='viewport' content='width=device-width, initial-scale=1.0')
+            link(rel='stylesheet', href='/css/bootstrap/bootstrap.min.css')
+            link(rel='stylesheet' href='/css/admin.css')
+            link(rel='shortcut icon' type='image/png' href='/img/favicon.png')
+            script(src='https://kit.fontawesome.com/4eabed3be0.js')
+            title Audiofy | #{title}
+
+    body.bg-secondary.text-light
+
+        include ../_progress
+        include ../_loader
+        include ../_alert
+
+        .content__main--body
+
+            include _sidebar
+            .sidebar__main--toggler.bg-secondary
+                i.fas.fa-bars
+
+            .content__main
+                block content
+                    h1 This is placeholder for content
+
+        script(src='/js/jquery/jquery-3.6.0.min.js')
+        script(src='/js/bootstrap/bootstrap.min.js')
+        script(src='/js/bundle.js') 
+        script(src='/js/adminBundle.js') 

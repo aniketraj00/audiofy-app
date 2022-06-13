@@ -1,0 +1,132 @@
+.sidebar__main {
+  display: flex;
+  width: 240px;
+  position: fixed;
+  height: 100%;
+  z-index: 100;
+}
+
+.bg-primary {
+  background-color: rgb(122, 37, 233) !important;
+}
+
+.sidebar__main--toggler {
+  position: fixed;
+  margin-left: 60px;
+  width: 100vw;
+  padding: 16px 0px;
+  padding-left: 48px;
+  height: 60px;
+  font-size: 18px;
+  background-color: rgb(243, 234, 234);
+  transition: all 0.2s ease-out;
+  z-index: 100;
+}
+
+.sidebar__main--toggler > i {
+  cursor: pointer;
+}
+
+.sidebar__main--icons,
+.sidebar__main--text {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  background: rgb(68, 11, 143);
+}
+
+.sidebar__main--icons {
+  min-width: 60px;
+  z-index: 1;
+}
+
+.sidebar__main--text {
+  width: 180px;
+  transition: all 0.2s ease-out;
+}
+
+.sidebar__main--text > .sidebar__main--text-brand,
+.sidebar__main--icons > .sidebar__main--icons-logo {
+  cursor: default;
+  font-size: 20px;
+  margin: 13px 0px;
+}
+
+.sidebar__main--icons > .sidebar__main--icons-item,
+.sidebar__main--text > .sidebar__main--text-item {
+  margin: 32px 0px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.sidebar__main--icons > .sidebar__main--icons-item > a,
+.sidebar__main--text > .sidebar__main--text-item > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.cCard {
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card--unrounded {
+  border-radius: 0px;
+  border: none;
+}
+
+.sidebar__main--text-slide {
+  transform: translateX(-180px);
+}
+
+.sidebar__main--slide {
+  width: 60px;
+}
+
+.content__main--slide {
+  margin-left: 240px;
+  width: calc(100vw - 240px);
+}
+
+.sidebar__main--toggler-slide {
+  margin-left: 240px;
+}
+
+.active {
+  border-left: 3px solid #fff;
+}
+
+.content__main {
+  transition: 0.3s;
+  padding-top: 60px;
+  margin-left: 60px;
+  width: calc(100vw - 60px);
+}
+
+.content__main--body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+.r-bl-0 {
+  border-bottom-left-radius: 0px;
+}
+
+.r-br-0 {
+  border-bottom-right-radius: 0px;
+}
+
+.r-tl-0 {
+  border-top-left-radius: 0px;
+}
+
+.r-tr-0 {
+  border-top-right-radius: 0px;
+}
+
+.bb-0 {
+  border-bottom: none;
+}
+
+.bt-0 {
+  border-top: none;
+}

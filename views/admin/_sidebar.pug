@@ -1,0 +1,32 @@
+.sidebar__main.sidebar__main--slide
+    .sidebar__main--icons.text-light.text-center
+        .sidebar__main--icons-logo
+            .fas.fa-users-cog
+        .sidebar__main--icons-item(class=`${activePage.hasOwnProperty('dashboard') ? 'active' : ''}`)
+            a(href='/admin')
+                .fas.fa-tachometer-alt
+        .sidebar__main--icons-item(class=`${activePage.hasOwnProperty('albumManage') ? 'active' : ''}`)
+            a(href='/admin/manageAlbum')
+                .fas.fa-tasks
+        .sidebar__main--icons-item(class=`${activePage.hasOwnProperty('albumUpload') ? 'active' : ''}`)
+            a(href='/admin/uploadAlbum')
+                .fas.fa-cloud-upload-alt
+        .sidebar__main--icons-item(class=`${activePage.hasOwnProperty('userManage') ? 'active' : ''}`)
+            a(href='/admin/manageUser')
+                .fas.fa-users
+        .sidebar__main--icons-item.logoutBtn
+            a
+                .fas.fa-sign-out-alt
+                
+    .sidebar__main--text.sidebar__main--text-slide.text-light
+        .sidebar__main--text-brand AUDIOFY
+        .sidebar__main--text-item
+            a(href='/admin') Dashboard
+        .sidebar__main--text-item
+            a(href='/admin/manageAlbum') Manage Album
+        .sidebar__main--text-item
+            a(href='/admin/uploadAlbum') Upload Album
+        .sidebar__main--text-item
+            a(href='/admin/manageUser') Manage Users
+        .sidebar__main--text-item.logoutBtn
+            a Logout

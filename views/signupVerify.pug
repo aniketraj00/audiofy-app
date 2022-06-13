@@ -1,0 +1,16 @@
+extends authCardBase 
+
+block authHeaderIcon
+    i.fas.fa-user-plus.fa-3x.m-1
+
+block authContent 
+    h1.auth__card-form--h1.cmb-2 Register an account
+    p.small Confirm your email address before proceeding.
+    form.form__signup-verify
+        .form-group
+            label(for='emailId') Email address 
+            input.form-control(type='email' placeholder='abc@example.com' id='emailId' required)
+        input.btn.btn-block.cbg-primary.auth__card-btn.form__signup-verify--btn(type='submit' value='Send Confirmation Email')
+    hr
+    p.mb-0 Already have an account ?
+        a.ml-2.auth__card-btn--link(href='/login') Log in

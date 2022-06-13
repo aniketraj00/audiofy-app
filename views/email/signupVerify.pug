@@ -1,0 +1,15 @@
+extends baseEmail
+
+block content 
+    p Hi #{firstName},
+    p In order to complete the signup, Please click on the link given below.
+    table.btn.btn-primary(role='presentation', border='0', cellpadding='0', cellspacing='0')
+        tbody
+            tr
+                td(align='left')
+                    table(role='presentation', border='0', cellpadding='0', cellspacing='0')
+                        tbody
+                            tr
+                                td
+                                    a(href=`${url}`, target='_blank') Confirm Email
+    p This confirmation email will expire in 10 minutes. After that you will have to re-initiate the signup process.

@@ -1,0 +1,21 @@
+extends authCardBase 
+
+block authHeaderIcon
+    i.fas.fa-user-lock.fa-3x.m-1
+
+block authContent 
+    h1.auth__card-form--h1.cmb-2 Log into your account
+    p.small You are just one step away from accessing the world's largest music library.
+    form.form__login
+        .form-group.mb-2.mt-2 
+            label(for='emailId') Email address 
+            input.form-control(type='email' id='emailId' placeholder='abc@example.com' required)
+        .form-group.mb-2
+            label(for='pass') Password
+            input.form-control(type='password' id='pass' placeholder='............' required)   
+        p.mb-4.small Forgot Password ? 
+            a.ml-1.auth__card-btn--link(href='/resetPassword') Click here      
+        input.btn.btn-block.cbg-primary.auth__card-btn(type='submit' value='Submit')
+    hr
+    p.mb-0 Don't have an account ?
+        a.ml-2.auth__card-btn--link(href='/signup') Sign Up

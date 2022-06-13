@@ -1,0 +1,25 @@
+extends adminBase 
+
+block content 
+    .container-fluid.pl-lg-5.pt-lg-5.pr-lg-5 
+        .row.p-2 
+            .col-12.col-md-6.col-lg-4
+                h1.upload__album-h1.display-5.content__main--h1.mt-3 Single Upload
+                p.upload__album-p.mb-0 Select all the audio files that belong to the album and press next to move to the next step where you can change all of its metadata if necessary and then click upload to upload the album. You can cancel the process by clicking on the cancel button.
+        hr
+        .row.p-2 
+            .col-12.col-sm-10.col-md-6.col-lg-4
+                .card
+                    .card-body 
+                        .form.text-dark
+                            .custom-control.custom-radio.custom-control-inline.mb-2
+                                input.custom-control-input(type='radio' id='fileSelectOne' name='customRadioInline' checked)
+                                label.custom-control-label(for='fileSelectOne') Single Album
+                            .custom-control.custom-radio.custom-control-inline.mb-2
+                                input.custom-control-input(type='radio' id='fileSelectMultiple' name='customRadioInline')
+                                label.custom-control-label(for='fileSelectMultiple') Multiple Albums
+                            .custom-file
+                                input.custom-file-input(type='file' id='fileSelector', accept='.mp3' multiple)
+                                label.custom-file-label(for='fileSelector') Choose files
+                            input.btn.btn-primary.btn-sm.btn-block.mt-3.form__upload-btn.bg-primary(type="button", value="Next")     
+        .row.p-2.album__info
