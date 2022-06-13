@@ -182,13 +182,12 @@ body {
 
 .sidebar {
   position: fixed;
-  transform: translateX(-100%);
+  transform: translateX(-105%);
   height: 100vh;
   width: fit-content;
   padding: 1rem 2rem;
   z-index: 11;
   box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.3);
-  transition: 0.5s;
 }
 
 .sidebar-toggler--open,
