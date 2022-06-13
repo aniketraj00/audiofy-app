@@ -38,7 +38,7 @@ export class API {
     static getSignupVerify = async email => await API.requestAPI(`${API.userEndpoint}/signup`, 'POST', { email });
 
     static getSignup = async (tempUserId, verificationToken, data) => {
-        API.requestAPI(`${API.userEndpoint}/signup/${tempUserId}/${verificationToken}`, 'POST', {
+        return API.requestAPI(`${API.userEndpoint}/signup/${tempUserId}/${verificationToken}`, 'POST', {
             name: data[0],
             password: data[1],
             passwordConfirm: data[2]

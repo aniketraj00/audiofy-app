@@ -41,7 +41,7 @@ export class Authenticator {
             if(res.data.status === 'success') {
                 Utils.dispatchTimer(() => {
                     Loader.hideLoader();
-                    Loader.showAlert('success', `${res.data.message} Redirecting...`);
+                    Alert.showAlert('success', `${res.data.message} Redirecting...`);
                     Utils.dispatchTimer(() => {
                         location.assign('/login')
                     }, 2000);
@@ -107,6 +107,7 @@ export class Authenticator {
         try {
             Loader.showLoader('Signing Up...')
             const res = await API.getSignup(tempUserId, verificationToken, data);
+            console.log(res);
             if(res.data.status === 'success') {
                 Utils.dispatchTimer(() => {
                     Loader.hideLoader();
@@ -116,6 +117,8 @@ export class Authenticator {
             }
 
         } catch (err) {
+            console.log(err);
+            console.log(err.response);
             Authenticator.errorHandler(err.response.data.message, 1000);
         }
     }
