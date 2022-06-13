@@ -35,22 +35,11 @@ const changeDocTitle = title => {
 }
 
 const sidebarOpenEvtCallback = () => {
-    if(!sidebar.classList.contains('slide-in') && !sidebar.classList.contains('slide-out')) {
-        sidebar.classList.add('slide-in');
-        return;
-    }
-
-    if(sidebar.classList.contains('slide-out')) {
-        sidebar.classList.replace('slide-out', 'slide-in');
-        sidebarOpenBtn.classList.replace('slide-in', 'slide-out');
-        return;
-    }
+    sidebar.classList.add('slide-in');
 }
 
 const sidebarCloseEvtCallback = () => {
-    if(sidebar.classList.contains('slide-in')) {
-        sidebar.classList.replace('slide-in', 'slide-out');
-    }
+    sidebar.classList.remove('slide-in');
 }
 
 const toggleActiveTab = activeTab => {

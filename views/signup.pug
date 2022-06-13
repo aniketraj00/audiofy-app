@@ -9,14 +9,14 @@ block authContent
     form.form__signup(data-uid=`${tempUserId}` data-vtkn=`${verificationToken}`)
         .form-group.mt-2.mb-2 
             label(for='name') Full Name
-            input.form-control(type='text' placeholder='Rahul Kumar' id="name" required)
+            input.form-control(type='text' id="name" required)
         .form-group.mb-2 
             label(for='pass') Password 
                 small.text-muted.ml-1 (Min. 8 characters)
-            input.form-control.auth__card-input(type='password' placeholder='...........' id="pass" required)  
+            input.form-control.auth__card-input(type='password' id="pass" required)  
             
         .form-group.mb-4 
             label(for='cpass') Confirm Password 
-            input.form-control.auth__card-input(type='password' placeholder='...........' id="cpass" required)   
+            input.form-control.auth__card-input(type='password' id="cpass" required)   
         
         input.btn.btn-block.cbg-primary.auth__card-btn.form__signup-btn(type='submit' value='Submit')

@@ -193,6 +193,7 @@ input.form-control#cpass::-webkit-input-placeholder {
   padding: 1rem 2rem;
   z-index: 11;
   box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
 }
 
 .sidebar-toggler--open,
@@ -244,9 +245,6 @@ input.form-control#cpass::-webkit-input-placeholder {
   animation: slide-in 0.5s ease forwards;
 }
 
-.slide-out {
-  animation: slide-out 0.5s ease forwards;
-}
 
 @keyframes slide-in {
   100% {

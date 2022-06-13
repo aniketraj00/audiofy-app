@@ -9,10 +9,10 @@ block authContent
     form.form__login
         .form-group.mb-2.mt-2 
             label(for='emailId') Email address 
-            input.form-control(type='email' id='emailId' placeholder='abc@example.com' required)
+            input.form-control(type='email' id='emailId' required)
         .form-group.mb-2
             label(for='pass') Password
-            input.form-control(type='password' id='pass' placeholder='............' required)   
+            input.form-control(type='password' id='pass' required)   
         p.mb-4.small Forgot Password ? 
             a.ml-1.auth__card-btn--link(href='/resetPassword') Click here      
         input.btn.btn-block.cbg-primary.auth__card-btn(type='submit' value='Submit')
